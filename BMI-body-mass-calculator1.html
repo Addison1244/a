@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>Activity - Body mass calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="static/css/css1.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link href="static/css/bootstrap1.css" rel="stylesheet">
+    <link href="static/css/style1.css" rel="stylesheet">
+    <link href="static/css/fontello.css" rel="stylesheet"> 
+    
+    <!-- Calculators CSS -->
+    <link rel="stylesheet" href="static/css/calculators.css">
+  </head>
+  <body>
+
+		 <div class="container-fluid">
+         			<div class="row row_in_widget" style="padding-top:15px;">
+                    
+                	<div class="col-md-6 col-sm-6">
+                         <form>
+                            <div class="form-group"><input type="text" class="form-control" name="Weight" placeholder="Weight"></div>
+                            <div class="form-group">
+                            <div class="styled-select">
+                            <select class="form-control col-md-3" name="weight_select">
+                            <option value="kilo">By Kilo (KG)</option>
+                                  <option value="pounds">By Pounds</option>
+                                </select>
+                                </div>
+                             </div>
+                             
+                            <div class="form-group"><input type="text" class="form-control" name="Height" placeholder="Height"></div>
+                            
+                            <div class="form-group">
+                            <div class="styled-select">
+                            <select class="form-control" name="height_select">
+                                  <option value="cm">By Centimeters (cm)</option>
+                              <option value="inches">By Inches</option>
+                                </select>
+                                </div>
+                            </div>
+        
+                            <input type="hidden" name="calculator" value="bmi_calculator">
+                        </form>
+                        <button id="selectBtn" class="button_medium add_top">Calculate</button>
+                      </div>
+                
+                        <div class="col-md-6 col-sm-6">
+                             <div class="result">
+                                <h3>BMI Value for you</h3>
+                                <div id="bmi_value">0</div>
+                                <div id="indicator"></div>
+                             </div>
+                        </div>
+                        
+           				<div class="row row_in_widget">
+                       <div class="col-sm-12">
+                        		<h4>BMI Range Indication</h4>
+                                <ul id="bmi_range">
+                                	<li><strong>Less than 16.5</strong> = Severely Underweight</li>
+                                    <li><strong>16.5 - 18.5</strong>  = Underweight</li>
+                                    <li><strong>18.5 - 25</strong>  = Normal</li>
+                                    <li><strong>25 - 30</strong>  = Overweight</li>
+                                    <li><strong>30+</strong>  = Obese</li>
+                                </ul>
+                         </div><!-- End col-sm-12 -->
+                      </div><!-- End row -->
+                      
+              </div><!-- End row -->
+    </div><!-- End container fluid -->
+
+<!-- CALCULATOR JS --> 
+<script src="static/js/jquery-2.2.4.min.js"></script>
+<script src="static/js/calories_calculators.js"></script>
+
+</body>
+</html>
